@@ -1,0 +1,18 @@
+@use '../abstract/variables' as var;
+
+.modalBox {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px 0 #404040;
+  @media (max-width: 768px) {
+    width: 297px;
+  }
+}
+
+:export {
+  primary: lighten($color: var.$primary, $amount: 20);
+}

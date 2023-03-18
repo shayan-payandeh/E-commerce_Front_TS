@@ -1,0 +1,35 @@
+@use '../abstract/variables' as var;
+
+.section {
+  box-shadow: var.$boxShadow !important;
+  padding: 0 !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  max-width: 700px !important;
+  @media (max-width: 768px) {
+    width: 95% !important;
+    margin: 10px auto !important;
+  }
+  .item {
+    &:hover {
+      background-color: lighten($color: var.$primary, $amount: 70) !important;
+    }
+  }
+
+  .activeItem {
+    background-color: lighten($color: var.$primary, $amount: 63) !important;
+    &:hover {
+      background-color: lighten($color: var.$primary, $amount: 70) !important;
+    }
+  }
+}
+
+.sectionExtraPersian {
+  margin-left: auto !important;
+  margin-right: 15px !important;
+}
+
+.sectionExtraEnglish {
+  margin-right: auto !important;
+  margin-left: 15px !important;
+}

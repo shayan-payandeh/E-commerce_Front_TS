@@ -1,0 +1,33 @@
+@use '../abstract/variables' as var;
+
+.table {
+  @media (max-width: 768px) {
+    width: 650px;
+  }
+  .tableHead {
+    .tableHeaderCell {
+      text-align: center;
+      @media (max-width: 768px) {
+        font-size: var.$font-size-sm;
+      }
+    }
+  }
+
+  .tableBodyCell {
+    text-align: center;
+    font-size: 14px;
+    @media (max-width: 768px) {
+      padding: 10px 12px;
+      font-size: var.$font-size-sm;
+    }
+  }
+  .detailButton {
+    text-transform: none;
+    background-color: var.$primary;
+    padding: 6px 12px;
+
+    @media (max-width: 768px) {
+      font-size: var.$font-size-sm;
+    }
+  }
+}

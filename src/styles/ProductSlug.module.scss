@@ -1,0 +1,88 @@
+@use './abstract/variables' as var;
+@use './abstract/mixins' as mixin;
+
+.container {
+  .imageBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .infoBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+  }
+
+  .listItem {
+    padding: 0;
+    .text {
+      font-size: 22px;
+    }
+  }
+
+  .listItemFirst {
+    padding: 0;
+    .text {
+      font-size: 14px;
+      color: #a1a1a1;
+    }
+  }
+
+  .listItemSecond {
+    padding: 0;
+    margin-top: 14px;
+  }
+
+  .listItemThird {
+    padding: 0;
+    margin-top: 25px;
+
+    .englishText {
+      font-size: 19px;
+      color: red;
+    }
+
+    .persianText {
+      font-size: 19px;
+      color: red;
+      margin-right: 0px;
+    }
+
+    .textThrough {
+      text-decoration: line-through;
+    }
+  }
+
+  .listItemForth {
+    padding: 0;
+    margin-top: 20px;
+
+    .text {
+      font-size: 14px;
+      color: #a1a1a1;
+    }
+  }
+
+  .listItemFifth {
+    padding: 0;
+    margin-top: 10px;
+
+    .text {
+      font-size: 14px;
+      color: #a1a1a1;
+    }
+  }
+
+  .listItemSixth {
+    padding: 0;
+    margin-top: 60px;
+  }
+
+  .addButton {
+    @include mixin.btn(var.$primary);
+    color: var.$white;
+  }
+}

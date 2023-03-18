@@ -1,0 +1,53 @@
+@use '../abstract/variables' as var;
+
+.footer {
+  margin-top: 100px;
+  margin-bottom: 0px !important;
+  box-sizing: border-box;
+  color: var.$white;
+  height: 250px;
+  @media (max-width: 768px) {
+    box-sizing: border-box;
+    padding-top: 30px;
+    font-size: 12px;
+  }
+  .mainFooter {
+    background-color: var.$primaryShadow;
+  }
+}
+
+.column {
+  height: 200px;
+  padding: 20px;
+  color: var.$white;
+
+  .columnTitleContainerEnglish {
+    text-align: left;
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  .columnListItemsContainerEnglish {
+    @extend .columnTitleContainerEnglish;
+    font-size: 14px;
+  }
+
+  .columnTitleContainerPerian {
+    text-align: right;
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  .columnListItemsContainerPersian {
+    @extend .columnTitleContainerPerian;
+    font-size: 14px;
+  }
+}
+
+.copyrightSection {
+  height: 65px;
+  line-height: 65px;
+  background-color: var.$primary;
+}

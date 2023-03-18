@@ -1,0 +1,21 @@
+@use '../abstract/variables' as var;
+
+.container {
+  .navbarButton {
+    text-transform: lowercase;
+    margin-left: 15px;
+    box-shadow: 0 0px 2px 0px #c9c9c9;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    text-align: start;
+    width: 140px;
+    min-width: 120px;
+    color: var.$white;
+    background-color: var.$primaryShadow;
+
+    &:hover {
+      color: white;
+      background: lighten($color: var.$primaryShadow, $amount: 3);
+    }
+  }
+}

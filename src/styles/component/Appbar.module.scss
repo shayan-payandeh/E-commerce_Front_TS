@@ -1,0 +1,121 @@
+@use '../abstract/variables' as var;
+@use '../abstract/mixins' as mixin;
+
+.grow {
+  flex-grow: 1;
+}
+
+.mainNavbar {
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: var.$primary;
+
+  @media screen and (max-width: 768px) {
+    padding: 4px 1px;
+  }
+
+  & a {
+    color: var.$white;
+  }
+
+  .languageText {
+    color: var.$white;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 3px;
+    font-size: 12px;
+
+    @media screen and (max-width: 768px) {
+      margin-left: 1px;
+      margin-right: 1px;
+    }
+  }
+
+  .menu {
+    margin-top: 0px;
+    margin-left: 10px;
+
+    .menuItem {
+      font-size: 150px;
+      padding: 14px 45px;
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px grey solid;
+      @media (max-width: 768px) {
+        font-size: 13px;
+        padding: 2px 22px;
+      }
+    }
+  }
+
+  .englishLink {
+    margin-right: 13px;
+  }
+
+  .persianLink {
+    margin-left: 13px;
+    font-size: 13px;
+  }
+}
+
+.secondNavbar {
+  // position: sticky !important;
+  display: none;
+  box-shadow: 0 0 10px 0px #c2c2c2;
+  // min-height: 50px;
+  @media screen and (min-width: 900px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.activeTab {
+  @include mixin.tab;
+  background-color: lighten($color: var.$primary, $amount: 68);
+  .menuItemText {
+    color: lighten($color: var.$primary, $amount: 13);
+    font-weight: bold;
+  }
+  // border-bottom: 2px solid #d10023;
+}
+
+.tab {
+  @include mixin.tab;
+  &:hover {
+    padding: '11px 40px';
+    background-color: #ebebeb;
+    text-align: center;
+  }
+  .menuItemText {
+    color: var.$primaryShadow;
+    text-align: center;
+  }
+}
+
+.secondeNavbarMobile {
+  position: static;
+  display: block;
+  padding: 0;
+  box-shadow: 0 0 10px 0px #c2c2c2;
+
+  @media (min-width: 900px) {
+    display: none;
+  }
+
+  .accordion {
+    background-color: var.$primary;
+
+    .expanded {
+      background-color: var.$primaryLight;
+    }
+    .notExpanded {
+      background-color: var.$white;
+    }
+  }
+}
+
+:export {
+  primary: var.$primary;
+  primaryLight: var.$primaryLight;
+  whites: var.$white;
+}

@@ -1,0 +1,10 @@
+@use '../abstract/variables' as var;
+@use '../abstract/mixins' as mixin;
+
+.orderSummaryCard {
+  background-color: #f7f7f7;
+
+  .placeOrderButton {
+    @include mixin.btn(var.$primary);
+  }
+}

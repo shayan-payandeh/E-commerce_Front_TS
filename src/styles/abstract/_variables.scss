@@ -1,0 +1,48 @@
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$theme1: #2d4159;
+$theme2: #2d593d;
+$theme3: #592d55;
+$theme4: #59502d;
+$theme5: #593c2d;
+$theme6: #592f2d;
+$theme7: #592d41;
+$theme8: #2d5559;
+$primary: $theme1;
+$primaryShadow: mix($primary, $black, 75);
+$primaryLight: mix($primary, $white, 25);
+$primaryHover: #038abb;
+
+$color: (
+  'theme': #2d4159,
+  'primary': #0678a1,
+  'secondary': FireBrick,
+  'maroon': #800000,
+  'red': #ff0000,
+  'orange': #ffa500,
+  'yellow': #ffff00,
+  'green': #008000,
+  'purple': #800080,
+  'pink': #da70d6,
+  'blue': #0000ff,
+  'navy': #000080,
+  'black': rgb(0, 0, 0),
+  'grey': #808080,
+  'silver': #c0c0c0,
+  'white': white,
+);
+
+$boxShadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+  rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+  rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+$border-radius: 8px;
+
+$base-font-size: 1rem;
+$font-size-xs: $base-font-size * 0.7;
+$font-size-sm: $base-font-size * 0.9;
+$font-size-md: $base-font-size * 1.2;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 1.7;

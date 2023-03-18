@@ -1,0 +1,46 @@
+@use '../abstract/variables' as var;
+
+.filterSection {
+  display: none;
+  @media screen and (min-width: 900px) {
+    display: block;
+  }
+}
+
+.filterSectionMobile {
+  display: block;
+  border: 2px solid rgba(0, 0, 0, 0.24);
+  margin: 10px auto;
+  width: 95%;
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+  @media screen and (max-width: 599px) {
+    display: block;
+    max-width: 400px;
+  }
+}
+
+.silderFilterSection {
+  display: none;
+  @media screen and (min-width: 900px) {
+    display: block;
+  }
+}
+.silderFilterSectionMobile {
+  display: block;
+  width: 95%;
+  border: 2px solid rgba(0, 0, 0, 0.24);
+  margin: 10px auto;
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+  @media screen and (max-width: 599px) {
+    display: block;
+    max-width: 400px;
+  }
+}
+
+:export {
+  primary: var.$primary;
+}

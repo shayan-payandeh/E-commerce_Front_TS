@@ -1,0 +1,60 @@
+@use '../abstract/variables' as var;
+@use '../abstract/mixins' as mixin;
+
+.card {
+  margin-bottom: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 100%;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+  @media only screen and (max-width: 899px) {
+    max-width: 380px;
+    margin: 10px auto;
+  }
+  .cardAction {
+    .productName {
+      font-size: 2.2vh;
+    }
+    .priceContainer {
+      display: flex;
+      width: 100%;
+      font-size: 2.2vh;
+    }
+  }
+
+  .addButton {
+    @include mixin.btn(var.$primary);
+    text-transform: none;
+    font-size: 2.2vh;
+  }
+
+  .updateButtonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .updateButton {
+      background-color: var.$primary;
+      color: #fff;
+      width: 23%;
+      font-size: 16px;
+    }
+
+    .textFieldContainer {
+      width: 54%;
+      .theTextField {
+        height: 7px;
+        width: 100%;
+        background-color: #f8f8f8;
+        text-align: center;
+        border: solid 1px var.$primary;
+      }
+    }
+  }
+}
+
+:export {
+  primary: var.$primary;
+  lightPrimary: var.$primaryLight;
+}

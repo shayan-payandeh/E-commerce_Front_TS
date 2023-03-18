@@ -1,0 +1,26 @@
+@mixin btn($bg-color) {
+  background-color: $bg-color;
+  cursor: pointer;
+  border-radius: 7px;
+  border-style: none;
+  font-size: 15px;
+  text-transform: capitalize;
+  padding: 10px 14px;
+  transition: all 0.4s;
+
+  &:hover {
+    @if ($bg-color == #fff) {
+      background-color: darken($color: $bg-color, $amount: 2);
+    } @else {
+      background-color: lighten($color: $bg-color, $amount: 4);
+    }
+  }
+}
+
+@mixin tab {
+  box-sizing: 'border-box';
+  padding: 12px 40px;
+  text-transform: 'capitalize';
+  color: #616161;
+  transition: ease-in-out 0.4s;
+}

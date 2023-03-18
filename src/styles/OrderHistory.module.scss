@@ -1,0 +1,21 @@
+.historyContainer {
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+
+  .englishTitle {
+    font-size: 20px;
+  }
+  .persianTitle {
+    margin-right: 0;
+    margin-left: auto;
+    font-size: 20px;
+  }
+}
+
+.pagination {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}

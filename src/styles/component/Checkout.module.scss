@@ -1,0 +1,5 @@
+@use '../abstract/variables' as var;
+
+:export {
+  primary: var.$primary;
+}
