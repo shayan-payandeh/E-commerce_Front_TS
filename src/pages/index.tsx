@@ -7,7 +7,7 @@ import ProductService from '@/service/productService';
 import newestProducts from '@/utils/limitedProducts';
 import NextLink from 'next/link';
 import { url } from '@/utils/values';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import shirtModel1 from '@/assets/images/shirtModel1.jpg';
 import pantsModel2 from '@/assets/images/pantsModel2.jpg';
 import zaraBrand from '@/assets/images/zaraBrand.jpg';
@@ -39,31 +39,33 @@ function Home({ allProducts, bestSelling }: HomeProps) {
         <Grid item container md={4} xs={12} spacing={1}>
           <Grid item md={12} xs={12}>
             <NextLink href={`${url.productsUrl}?slug=Shirts`} passHref>
-              <div
-                style={{ marginTop: '40px' }}
+              <Box
                 className={styles.categoryContainer}
+                style={{ marginTop: '55px' }}
               >
                 <Image
-                  height={330}
-                  width={610}
+                  height={200}
+                  width={360}
                   alt="shirts"
                   className={styles.categoryImage}
                   src={shirtModel1}
+                  layout="responsive"
                 />
-              </div>
+              </Box>
             </NextLink>
           </Grid>
           <Grid item md={12} xs={12}>
             <NextLink href={`${url.productsUrl}?slug=Pants`} passHref>
-              <div className={styles.categoryContainer}>
+              <Box className={styles.categoryContainer}>
                 <Image
-                  height={330}
-                  width={610}
+                  height={200}
+                  width={360}
                   alt="pants"
                   className={styles.categoryImage}
                   src={pantsModel2}
+                  layout="responsive"
                 />
-              </div>
+              </Box>
             </NextLink>
           </Grid>
         </Grid>
@@ -72,7 +74,12 @@ function Home({ allProducts, bestSelling }: HomeProps) {
         </Grid>
       </Grid>
 
-      <Grid container spacing={3} style={{ marginTop: '50px' }}>
+      <Grid
+        container
+        rowSpacing={5}
+        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+        style={{ marginTop: '50px' }}
+      >
         <Grid item md={6} xs={12}>
           <NextLink href={`${url.productsUrl}?brand=Raymond`} passHref>
             <Box className={styles.categoryContainer}>
@@ -80,8 +87,9 @@ function Home({ allProducts, bestSelling }: HomeProps) {
                 className={styles.categoryImage}
                 src={raymondBrand}
                 alt="shirts"
-                width={610}
-                height={284}
+                width={570}
+                height={268}
+                layout="responsive"
               />
             </Box>
           </NextLink>
@@ -93,9 +101,9 @@ function Home({ allProducts, bestSelling }: HomeProps) {
                 className={styles.categoryImage}
                 src={zaraBrand}
                 alt="pants"
+                width={570}
+                height={268}
                 layout="responsive"
-                width={610}
-                height={284}
               />
             </Box>
           </NextLink>

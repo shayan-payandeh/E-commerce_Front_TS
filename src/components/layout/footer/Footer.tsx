@@ -1,7 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import styles from '@/styles/component/Footer.module.scss';
 import { AppCtxt } from '@/utils/Store';
-import { useRouter } from 'next/router';
 import CopyrightSection from './CopyrightSection';
 import ContactUsSection from './ContactUsSection';
 import FeaturesSection from './FeaturesSection';

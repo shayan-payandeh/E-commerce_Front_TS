@@ -1,13 +1,13 @@
 import React from 'react';
 import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
-import styles from '@/styles/Home.module.scss';
+import Image from 'next/legacy/image';
 import slideImage1 from '@/assets/images/slideImage1.jpg';
 import slideImage6 from '@/assets/images/slideImage6.jpg';
 import slideImage7 from '@/assets/images/slideImage7.jpg';
 import slideImage8 from '@/assets/images/slideImage8.jpg';
 import slideImage9 from '@/assets/images/slideImage9.jpg';
-import Image from 'next/image';
+import styles from '@/styles/Home.module.scss';
 
 const images = [
   slideImage1,
@@ -19,18 +19,17 @@ const images = [
 
 function SlideShow() {
   return (
-    <div className={`slide-container + ${styles.slideShow}`}>
+    <div className={`slide-container  ${styles.slideShow}`}>
       <Fade>
         {images.map((image, index) => (
           <div className="each-slide" key={index}>
-            <div>
-              <Image
-                src={image}
-                width={1300}
-                height={700}
-                alt={`image${index + 1}`}
-              />
-            </div>
+            <Image
+              src={image}
+              width={740}
+              height={405}
+              alt={`image${index + 1}`}
+              layout="responsive"
+            />
           </div>
         ))}
       </Fade>

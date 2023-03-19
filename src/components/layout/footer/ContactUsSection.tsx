@@ -32,7 +32,7 @@ const ContactUsSection = () => {
         <span>
           {language === 'English'
             ? 'Address: Bandarabbas - Pasdaran blvd - Goharan street'
-            : 'آدرس : بندرعباس - بلوار پاسدان - خیابان گوهران '}
+            : 'آدرس : بندرعباس - بلوار پاسداران - خیابان گوهران '}
         </span>
       </div>
       <div
@@ -58,7 +58,7 @@ const ContactUsSection = () => {
       >
         <span>
           {language === 'English'
-            ? 'Email : shayan.@gmail.com'
+            ? 'Email : shayan.iker.@gmail.com'
             : 'ایمیل : shayan.iker@gmail.com'}
         </span>
       </div>
